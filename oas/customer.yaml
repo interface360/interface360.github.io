@@ -21,10 +21,6 @@ properties:
     type: string
     pattern: '^\+\d{1,15}$'
     example: "+14155552671"
-  dateOfBirth:
-    type: string
-    format: date
-    example: "1990-01-15"
   address:
     type: object
     properties:
