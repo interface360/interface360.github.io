@@ -1,0 +1,51 @@
+# customer.yaml
+type: object
+title: Customer
+description: A representation of a customer profile
+properties:
+  id:
+    type: string
+    format: uuid
+    description: Unique identifier for the customer
+  firstName:
+    type: string
+    example: Ray
+  lastName:
+    type: string
+    example: Arnado
+  email:
+    type: string
+    format: email
+    example: just_me@codecrates.xyz
+  phoneNumber:
+    type: string
+    pattern: '^\+\d{1,15}$'
+    example: "+14155552671"
+  dateOfBirth:
+    type: string
+    format: date
+    example: "1990-01-15"
+  address:
+    type: object
+    properties:
+      street:
+        type: string
+        example: "123 Main St"
+      city:
+        type: string
+        example: "Kansas City"
+      state:
+        type: string
+        example: "MO"
+      postalCode:
+        type: string
+        example: "64111"
+      country:
+        type: string
+        example: "US"
+    required: [street, city, state, postalCode, country]
+required:
+  - id
+  - firstName
+  - lastName
+  - email
